@@ -1,0 +1,24 @@
+// nel partial spaziature crea dinamicamente le classi per 
+// padding-(block/inline)-(sm/normal/md/lg/xl/xxl) e margin-(block/inline)-(sm/normal/md/lg/xl/xxl)
+$spaziature-map: (
+  sm: 0.5rem,
+  normal: 1rem,
+  md: 1.5rem,
+  lg: 2rem,
+  xl: 3rem,
+  xxl: 4rem
+);
+@each $size, $value in $spaziature-map {
+  .padding-block-#{$size} {
+    padding-block: $value;
+  }
+  .padding-inline-#{$size} {
+    padding-inline: $value;
+  }
+  .margin-block-#{$size} {
+    margin-block: $value;
+  }
+  .margin-inline-#{$size} {
+    margin-inline: $value;
+  }
+}

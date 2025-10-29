@@ -1,0 +1,23 @@
+// inserisci il font-family corrispondente e crea delle variabili per le misure principali dei font,
+// crea anche un mixin per title-big che userai per il titolo principale
+$font-family: 'Helvetica Neue', sans-serif;
+$font-size-base: 16px;
+$font-size-lg: 20px;
+$font-size-sm: 14px;
+$font-size-title-big: 5em;
+@mixin title-big {
+  font-family: $font-family;
+  font-size: $font-size-title-big;
+  font-weight: bold;
+}
+$fonts-map:(
+    B:$font-size-base,
+    L:$font-size-lg,
+    S:$font-size-sm,
+);
+@each $name, $size in $fonts-map{
+    .font-#{$name}{
+        font-size: $size;
+        font-family: $font-family;
+    }
+}

@@ -1,0 +1,68 @@
+@import './partials/reset';
+@import './partials/font';
+@import './partials/spaziature';
+@import './partials/colori';
+@import './partials/bottoni';
+@import './partials/mixins';
+@import './partials/animazioni';
+
+header {
+    background-color: $bg-hero;
+    @include d-flex-space-between;
+    padding: 40px 60px;
+    p{
+        @include title-big;
+    }
+    nav {
+        ul {
+            @include d-flex-center;
+            li {
+                margin: 0 1rem;
+                a {
+                    text-decoration: none;
+                    color: $text-color;
+                }
+            }
+        }
+    }
+}
+
+main {
+    .hero {
+        background-color: $bg-hero;
+        @include d-flex-center;
+        padding: 40px 60px;
+        div {
+            max-width: 600px;
+            h1 {
+                @include title-big;
+            }
+    
+            p {
+                max-width: 50%;
+                color: $text-color;
+                font-size: $font-size-lg;
+            }
+        }
+
+        img {
+            max-width: 50%;
+            height: auto;
+            @include floating(12px, 0 8px 16px rgba(255, 255, 255, 0.3));
+
+        }
+    }
+}
+ 
+.immagini {
+    @include fade-move('fadeInUp', 1s, 0s, 30px, ease-out);
+    @include grid(4);
+    gap: 1rem;
+    padding: 2rem;
+    img {
+        width: 20%;
+        height: auto;
+        @include floating(8px, 0 4px 8px rgba(0, 0, 0, 0.6));
+    }
+
+}

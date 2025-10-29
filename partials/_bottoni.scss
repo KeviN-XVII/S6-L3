@@ -1,0 +1,19 @@
+@import './colori';
+@import './font';
+$colorsbutton-map:(
+    B:$color-btn1,
+    O:$color-btn2,
+    G:$color-btn3,
+);
+@each $name, $color in $colorsbutton-map{
+    .button-#{$name}{
+    background-color: $color;
+    color: $text-color;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+}
