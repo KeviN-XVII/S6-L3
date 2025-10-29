@@ -333,7 +333,7 @@ main .hero div h1 {
   font-weight: bold;
 }
 main .hero div p {
-  max-width: 50%;
+  max-width: 80%;
   color: #f4f4f4;
   font-size: 20px;
 }
@@ -347,9 +347,9 @@ main .hero img {
 
 .immagini {
   animation: fadeInUp 1s ease-out 0s both;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
   gap: 1rem;
   padding: 2rem;
 }
@@ -364,7 +364,7 @@ main .hero img {
   }
 }
 .immagini img {
-  width: 20%;
+  width: 100%;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);

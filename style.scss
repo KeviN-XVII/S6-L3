@@ -39,7 +39,7 @@ main {
             }
     
             p {
-                max-width: 50%;
+                max-width: 80%;
                 color: $text-color;
                 font-size: $font-size-lg;
             }
@@ -56,11 +56,11 @@ main {
  
 .immagini {
     @include fade-move('fadeInUp', 1s, 0s, 30px, ease-out);
-    @include grid(4);
+    @include grid-4;
     gap: 1rem;
     padding: 2rem;
     img {
-        width: 20%;
+        width: 100%;
         height: auto;
         @include floating(8px, 0 4px 8px rgba(0, 0, 0, 0.6));
     }
